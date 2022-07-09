@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "b4b80bda-f864-4744-a010-09981929e2ce",
+		"name": "Prueba Leal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5424261"
+	},
+	"item": [
+		{
+			"name": "Consultar usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realizar acumulacion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"idUsuario\": 1,\r\n    \"idEstablecimiento\": 1,\r\n    \"valorCompra\": 500000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transaccion/acumulacion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaccion",
+						"acumulacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realizar redencion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"idUsuario\": 1,\r\n    \"idEstablecimiento\": 1,\r\n    \"puntosRedimir\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transaccion/redencion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaccion",
+						"redencion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
